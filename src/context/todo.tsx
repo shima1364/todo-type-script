@@ -1,5 +1,5 @@
 import { createContext, useReducer,Reducer} from "react";
-import { Todo, TodoContextProviderProps, TodoContextType } from "./types";
+import { TodoState, TodoContextProviderProps, TodoContextType , TodoActions} from "./types";
 
 export const TodoContext = createContext({} as TodoContextType);
 const initialState: TodoState ={

@@ -4,6 +4,9 @@ export type Todo = {
     priority: 0 | 1 | 2 | 3;
     completed: boolean;
 };
+export type TodoState = {
+ todos: Todo[];
+};
 type CreateAction={
     type: "create";
     payload: Omit<Todo, "id" | "completed">
@@ -12,14 +15,14 @@ type CreateAction={
 
 };
 
-type RemoveAction= {
+ type RemoveAction= {
     type: "remove";
-    paload: number
+    payload: number
 
 }
 
-type CompleteAction ={
-    tepe: "complete";
+ type CompleteAction ={
+    type: "complete";
     payload: {id: number; complete: boolean};
 };
 
